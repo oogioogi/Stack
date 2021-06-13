@@ -13,16 +13,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        VStack{
-//            Text("Hello, world!")
-//            Text("Hello, world!")
-//            Text("Hello, world!")
-//        }
-//        HStack{
-//            Text("Hello, world!")
-//            Text("Hello, world!")
-//            Text("Hello, world!")
-//        }
+        //        VStack{
+        //            Text("Hello, world!")
+        //            Text("Hello, world!")
+        //            Text("Hello, world!")
+        //        }
+        //        HStack{
+        //            Text("Hello, world!")
+        //            Text("Hello, world!")
+        //            Text("Hello, world!")
+        //        }
         ZStack {
             Color
                 .blue
@@ -66,10 +66,13 @@ struct ContentView: View {
                     Text(".").padding(.trailing, 2)
                     Text(" ").padding(.trailing, 2)
                 }
+            }.padding(.bottom, 250)
+            
+            VStack{
+                Text("Hello Woeld")
             }
-            
-            
         }
+
     }
 }
 
