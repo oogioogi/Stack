@@ -10,9 +10,15 @@ import SwiftUI
 
 // Stack
 // H V Z
-
 struct ContentView: View {
     var body: some View {
+        Text("Hello World")
+    }
+}
+/* [ Stack ]
+struct ContentView: View {
+    var body: some View {
+        // ------ Stack ------
         //        VStack{
         //            Text("Hello, world!")
         //            Text("Hello, world!")
@@ -23,6 +29,8 @@ struct ContentView: View {
         //            Text("Hello, world!")
         //            Text("Hello, world!")
         //        }
+        // ---------------------
+        // ----- Text -------
         ZStack {
             Color
                 .blue
@@ -69,12 +77,12 @@ struct ContentView: View {
             }.padding(.bottom, 250)
             
             VStack{
-                Text("Hello Woeld")
+                Text("Hello World")
             }
         }
-
     }
-}
+    
+}*/
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
