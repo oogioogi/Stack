@@ -14,22 +14,32 @@ import SwiftUI
 // Text
 
 struct ContentView: View {
+    @State var showDetail: Bool = false
     var body: some View {
         VStack{
-            Text("Hello World")
-                .font(.largeTitle)
-                .underline(true, color: .blue)
-                .bold()
-                .background(Color.yellow)
-            Text("Mr Lee")
-                .frame(width: 150, height: 50, alignment: .center)
-                .background(Color.green)
-                .cornerRadius(15.0)
+            Image("exit")
+                .resizable()
+                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            Image(systemName: "stop")
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                
+            Button(action: {
+                self.showDetail.toggle()
+            }) {
+                Text("Button")
+            }
             
+            if showDetail {
+                Text("Tapped Button")
+                    .font(.largeTitle)
+                    .lineLimit(nil)
+            }
         }
 
+        
     }
 }
+
 
 
 struct ContentView_Previews: PreviewProvider {
