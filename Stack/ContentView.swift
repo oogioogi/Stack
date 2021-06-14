@@ -14,26 +14,41 @@ import SwiftUI
 // Text
 
 struct ContentView: View {
-    @State var showDetail: Bool = false
     var body: some View {
         VStack{
-            Image("exit")
+            Image("face-mask")
                 .resizable()
-                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            Image(systemName: "stop")
-                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                
+                .frame(width: 150, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .background(Color.gray)
+                .mask(Circle())
+            
             Button(action: {
-                self.showDetail.toggle()
+                print("Tapped 로그인")
             }) {
-                Text("Button")
+                Text("로그인")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .bold()
+                    .frame(width: 150, height: 50, alignment: .center)
+                    .background(Color.yellow)
+                    .cornerRadius(15.0)
+                    .padding(10)
             }
             
-            if showDetail {
-                Text("Tapped Button")
-                    .font(.largeTitle)
-                    .lineLimit(nil)
+            Button(action: {
+                print("Tapped 회원 가입")
+            }) {
+                Text("회원 가입")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .bold()
+                    .frame(width: 150, height: 50, alignment: .center)
+                    .background(Color.yellow)
+                    .cornerRadius(15.0)
+                    .padding(.bottom, 10)
             }
+            Text("회원 가입은 여기서....")
+                .font(.caption)
+                .underline()
+                .foregroundColor(.pink)
         }
 
         
